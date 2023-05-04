@@ -1,5 +1,5 @@
 # free-photo-searcher.github.io
-Search and download photos from Pexels.com 
+An app using HTML, CSS and JS to search and download photos from Pexels.com
 
 Using the Pexels API, this is a simple app that allows a subject search(i.e. "cats") for free photos on Pexels.com .
 

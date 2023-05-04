@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+/* font-family: 'Domine', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Rubik+Moonrocks&display=swap');
+/* font-family: 'Catamaran', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Rubik Moonrocks', cursive */
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Indie+Flower&family=Oswald:wght@200;300;400;500;600;700&family=Permanent+Marker&family=Press+Start+2P&display=swap');
+/* font-family: 'Gloria Hallelujah', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Oswald', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Press Start 2P', cursive; */
+
+:root {
+    --card-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.2),
+    0 2.5px 5.3px rgba(0, 0, 0, 0.028),
+    0 4.6px 10px rgba(0, 0, 0, 0.035),
+    0 8.3px 17.9px rgba(0, 0, 0, 0.042),
+    0 15.5px 33.4px rgba(0, 0, 0, 0.05),
+    0 37px 80px rgba(0, 0, 0, 0.07);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* don't set background, color on *{} bc it will conflict, also these things are great for inheritance*/
+/* the above properties are not inherited, so good to go into * selector */
+/* overflow should go on elements in need of it, if on * might make things awkward/troublesome */
+
+html {
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 3rem;  */
+    scroll-padding: var(--scroll-padding, 5rem);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(#4c4b4b, #373633, #232726, #1a151a);
+    color: #efefef;
+    cursor: default;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 0;
+    opacity: 0.9;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    display: inline-block;
+    text-shadow: 0.2rem 0.2rem 0.5rem #222;
+}
+.logo i {
+    text-shadow: 0.2rem 0.2rem 0.5rem #222;
+    font-size: 2rem;
+    color: #efefef;
+    margin-left: 1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 250ms ease;
+    -webkit-transition: 250ms ease;
+    -moz-transition: 250ms ease;
+    -ms-transition: 250ms ease;
+    -o-transition: 250ms ease;
+}
+.logo:hover i {
+    opacity: 1;
+}
+h3 {
+    font-family: 'Catamaran', sans-serif;
+}
+.pexels-link {
+    padding-bottom: 1.8rem;
+    color: #efefef;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-decoration: none;
+    opacity: 0.7;
+    cursor: pointer;
+    line-height: 0.2rem;
+    transition: 200ms ease;
+    -webkit-transition: 200ms ease;
+    -moz-transition: 200ms ease;
+    -ms-transition: 200ms ease;
+    -o-transition: 200ms ease;
+}
+.pexels-link:hover {
+    opacity: 1;
+}
+.search-form {
+    /* background-color: red; */
+    /* width: 20em; */
+    position: relative;
+}
+.search-input {
+    color: #efefef;
+    padding: 0.2rem 1rem ;
+    width: 16rem;
+    font-size: 1.1rem;
+    border: 1px solid #efefef;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.search-input:active,
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.005);
+}
+.submit-btn {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    background-color: #efefef;
+    color: #222;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0.3rem 0.3rem;
+    border: none;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 250ms ease;
+    -webkit-transition: 250ms ease;
+    -moz-transition: 250ms ease;
+    -ms-transition: 250ms ease;
+    -o-transition: 250ms ease;
+}
+.submit-btn i {
+    margin-left: 0.3rem;
+}
+
+.submit-btn:hover {
+    opacity: 1;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+    padding: 1rem 1rem 5rem 1rem;
+    width: 80%;
+    margin: auto;
+    row-gap: 5rem;
+    column-gap: 1rem;
+}
+.gallery-img {
+    box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem #111;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    opacity: 0.9;
+    transition: 200ms ease;
+    -webkit-transition: 200ms ease;
+    -moz-transition: 200ms ease;
+    -ms-transition: 200ms ease;
+    -o-transition: 200ms ease;
+}
+.gallery-img img {
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.gallery-img:hover,
+.gallery-img:focus {
+    opacity: 1;
+    scale: 1.015;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding-inline: 0.8rem; 
+    border-bottom: 1px solid #222;
+}
+.info a {
+    color: #efefef;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    padding: 0.3rem;
+}
+.photographer {
+    opacity: 0.8;
+    transition: 200ms ease;
+    -webkit-transition: 200ms ease;
+    -moz-transition: 200ms ease;
+    -ms-transition: 200ms ease;
+    -o-transition: 200ms ease;
+}
+.download {
+    opacity: 0.8;
+    transition: 200ms ease;
+    -webkit-transition: 200ms ease;
+    -moz-transition: 200ms ease;
+    -ms-transition: 200ms ease;
+    -o-transition: 200ms ease;
+}
+.download i {
+    padding-left: 0.3rem;
+}
+.photographer:hover,
+.photographer:focus,
+.download:hover,
+.download:focus {
+    opacity: 1;
+}
+
+.nav-button {
+    display: grid;
+    margin-bottom: 2rem;
+}
+
+.more {
+    margin-inline: auto;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: lowercase;
+    padding: 0.1rem 1rem;
+    border: 1px solid #efefef;
+    background-color: #efefef;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    opacity: 0.8;
+    transition: 250ms ease;
+    -webkit-transition: 250ms ease;
+    -moz-transition: 250ms ease;
+    -ms-transition: 250ms ease;
+    -o-transition: 250ms ease;
+    cursor: pointer;
+}
+.more i {
+    margin-left: 0.8rem;
+}
+.more:hover {
+    opacity: 1;
+}
+
+/* .cursor {
+    pointer-events: none;
+    position: absolute;
+    width: 3rem;
+    aspect-ratio: 1;
+    background-color: none;
+    z-index: 10;
+    opacity: 0.7;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 2px solid var(--logo-color);
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+} */
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-delay: -1ms !important;
+        animation-duration: 1ms !important;
+        animation-iteration-count: 1 !important;
+        background-attachment: initial !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+    }
+}
+
